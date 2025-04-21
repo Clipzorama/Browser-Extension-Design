@@ -1,0 +1,48 @@
+import React from 'react';
+import Header from './components/Header';
+import ToggleFilter from './components/ToggleFilter';
+import ExtensionList from './components/ExtensionList';
+
+function App() {
+  return (
+    <div className="app-container">
+      <Header />
+      <ToggleFilter />
+      <ExtensionList />
+    </div>
+  );
+}
+
+export default App;
+
+
+1️⃣ Header.jsx
+This will include:
+
+The “Extensions” label
+
+The search bar
+
+The theme toggle button (light/dark)
+
+2️⃣ FilterBar.jsx
+Includes:
+
+The “Extensions List” title
+
+The three toggle buttons: All, Active, and Inactive
+
+It can also control the state of what's displayed using props or context.
+
+3️⃣ ExtensionList.jsx + ExtensionCard.jsx
+ExtensionList maps through a list of extensions
+
+ExtensionCard is a reusable component where you pass:
+
+icon
+
+name
+
+description
+
+isActive status (to toggle on/off view and switch)
