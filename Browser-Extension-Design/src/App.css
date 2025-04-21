@@ -31,6 +31,10 @@
 
   body {
     font-family: "Noto Sans", sans-serif;
-    background-color: var(--gradient-dark);
+    background-image: linear-gradient(to bottom, #040918, #091540);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
   }
   
