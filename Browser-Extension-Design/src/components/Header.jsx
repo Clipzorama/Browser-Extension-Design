@@ -1,6 +1,6 @@
 import './styles/Header.css'
-import logoS from './assets/images/logo.svg'
-import sun from './assets/images/icon-sun.svg'
+import logoS from '../assets/images/logo.svg'
+import sun from '../assets/images/icon-sun.svg'
 
 function Header() {
     <div className="heady">
