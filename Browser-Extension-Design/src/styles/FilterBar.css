@@ -1,0 +1,26 @@
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-container > h2 {
+    color: hsl(200, 60%, 99%);
+    font-size: 2rem;
+}
+
+.btn-container {
+
+}
+
+.all {
+
+}
+
+.active {
+
+}
+
+.inactive {
+
+}
