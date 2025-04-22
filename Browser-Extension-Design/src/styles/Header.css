@@ -5,9 +5,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 .headL {
     display: flex;
     align-items: center;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+    background-color: hsl(225, 23%, 24%);
+    padding: 0.9rem;
+    border-radius: 20px;
+    cursor: pointer;
 }
