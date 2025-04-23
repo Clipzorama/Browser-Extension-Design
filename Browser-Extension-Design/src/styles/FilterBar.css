@@ -10,7 +10,11 @@
 }
 
 .btn-container {
+    display: flex;
+}
 
+.btn-container > button {
+    
 }
 
 .all {

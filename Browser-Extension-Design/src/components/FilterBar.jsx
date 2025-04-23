@@ -9,8 +9,8 @@ function FilterBar() {
                 <button className="all">All</button>
                 <button className="active">Active</button>
                 <button className="inactive">Inactive</button>
+            </div>
         </div>
-    </div>
     )
     
 }
