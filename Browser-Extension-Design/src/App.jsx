@@ -8,8 +8,6 @@ function App() {
     <div className="app-container">
       <Header />
       <FilterBar />
-      
-
     </div>
   );
 }

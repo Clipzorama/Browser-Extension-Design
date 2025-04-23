@@ -22,4 +22,9 @@
     padding: 0.9rem;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.toggler:hover {
+    background-color: var(--neutral-600);
 }

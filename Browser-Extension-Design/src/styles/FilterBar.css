@@ -1,3 +1,6 @@
+/*  400, 500, 700 */
+
+
 .filter-container {
     display: flex;
     justify-content: space-between;
@@ -11,20 +14,20 @@
 
 .btn-container {
     display: flex;
+    gap: 0.5rem;
 }
 
 .btn-container > button {
-    
+    background-color: hsl(225, 23%, 24%);
+    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--neutral-600);
+    cursor: pointer;
+    color: hsl(0, 0%, 93%);
+    font-size: 1.1rem;
+    transition: 0.3s ease;
 }
 
-.all {
-
-}
-
-.active {
-
-}
-
-.inactive {
-
+.btn-container > button:hover {
+    background-color: var(--neutral-600);
 }
