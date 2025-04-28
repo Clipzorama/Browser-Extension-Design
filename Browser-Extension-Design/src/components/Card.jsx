@@ -12,6 +12,8 @@ function Card({imgSrc, title, desc}) {
             </section>
             <div className="bottom">
                 <button className="removeBtn">Remove</button>
+
+                {/* Anywhere on the label will toggle the checkbox when clicked */}
                 <label className="switch">
                     <input type="checkbox" className="checker"/>
                     <span className="slider"></span>
