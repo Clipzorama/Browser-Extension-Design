@@ -12,7 +12,10 @@ function Card({imgSrc, title, desc}) {
             </section>
             <div className="bottom">
                 <button className="removeBtn">Remove</button>
-                <input type="checkbox" className="checker" />
+                <label className="switch">
+                    <input type="checkbox" className="checker"/>
+                    <span className="slider"></span>
+                </label>
             </div>
         </div>
     );
