@@ -38,5 +38,9 @@
     min-height: 100vh;
     padding: 3rem 8rem 4rem 8rem;
 
-  }
+}
+
+.cardList {
+  display: grid;
+}
   

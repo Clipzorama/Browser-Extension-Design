@@ -1,0 +1,19 @@
+.card-container {
+    background-color: var(--neutral-800);
+    width: 30%;
+    border-radius: 15px;
+    border: 1px solid var(--neutral-600);
+    padding: 1rem;
+}
+
+.top {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}

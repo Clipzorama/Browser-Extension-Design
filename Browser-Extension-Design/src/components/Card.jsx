@@ -1,3 +1,5 @@
+import '../styles/Card.css'
+
 function Card({imgSrc, title, desc}) {
     return (
         <div className="card-container">
