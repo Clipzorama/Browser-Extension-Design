@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.8rem 1rem;
     border-radius: 20px;
     margin-bottom: 3rem;
 }
@@ -16,15 +16,24 @@
 }
 
 .toggler {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     background-color: hsl(225, 23%, 24%);
     padding: 0.9rem;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.toggler:focus {
+    outline: 2px solid var(--red-400);
+    border: 2px solid var(--neutral-700);
+
+
 }
 
 .toggler:hover {
     background-color: var(--neutral-600);
 }
+
