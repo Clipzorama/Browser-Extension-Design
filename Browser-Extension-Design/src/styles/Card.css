@@ -39,18 +39,29 @@
     padding: 0.4rem 1rem;
     border-radius: 20px;
     background-color: var(--neutral-800);
-    border: 1px solid var(--neutral-600);
+    border: 2px solid hsla(226, 11%, 37%, 0.6);
     color: var(--neutral-100);
     cursor: pointer;
-    transition: 0.4s;
     font-weight: 500;
 }
 
 .bottom > button:hover {
     background-color: var(--red-400);
     color: var(--neutral-700);
-    border: 1px solid var(--red-400);
+    border: 2px solid var(--red-400);
 }
+
+.bottom > button:focus {
+    outline: 2px solid var(--red-400);
+    border: 2px solid var(--neutral-700);
+    background-color: var(--neutral-600);
+}
+
+.bottom > button:focus:hover {
+    color: var(--neutral-100);
+
+}
+
 
 .switch {
     position: relative;
