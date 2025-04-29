@@ -36,16 +36,20 @@
 }
 
 .bottom > button {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 20px;
     background-color: var(--neutral-800);
     border: 1px solid var(--neutral-600);
     color: var(--neutral-100);
     cursor: pointer;
+    transition: 0.4s;
+    font-weight: 500;
 }
 
 .bottom > button:hover {
     background-color: var(--red-400);
+    color: var(--neutral-700);
+    border: 1px solid var(--red-400);
 }
 
 .switch {
