@@ -41,6 +41,9 @@
 }
 
 .cardList {
-  display: grid;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
 }
   
