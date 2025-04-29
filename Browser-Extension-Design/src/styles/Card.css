@@ -96,6 +96,12 @@ input:checked + .slider:before {
 
 /* When checkbox is checked --> (active) */
 input:checked + .slider {
-    background-color: var(--red-400) 
+    background-color: var(--red-400);
 }
+
+/* If .switch has a checked input and switch is being hovered, style (.slider) inside */
+.switch:has(input:checked):hover .slider {
+    background-color: var(--red-500);
+}
+
 
