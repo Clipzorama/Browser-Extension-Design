@@ -23,26 +23,36 @@
     padding: 0.6rem 1.2rem;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: 0.3s ease;
     font-weight: 500;
 }
 
 .active {
     background-color: var(--red-400);
     color: var(--neutral-700);
-    border: 1px solid var(--red-400);
+    border: 2px solid var(--red-400);
 
+}
+
+.active:focus {
+    outline: 2px solid var(--red-400);
+    border: 2px solid var(--neutral-700);
 }
 
 .active:hover {
     background-color: var(--red-500);
-    border: 1px solid var(--red-500);
+    border: 2px solid var(--red-500);
 }
 
 .inactive {
     background-color: hsl(225, 23%, 24%);
     color: var(--neutral-100);
     border: 1px solid var(--neutral-600);
+}
+
+.inactive:focus {
+    outline: 2px solid var(--red-400);
+    border: 1px solid var(--neutral-700);
+    background-color: var(--neutral-600);
 }
 
 .inactive:hover {
