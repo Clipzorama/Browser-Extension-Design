@@ -1,48 +1,74 @@
-import React from 'react';
-import Header from './components/Header';
-import ToggleFilter from './components/ToggleFilter';
-import ExtensionList from './components/ExtensionList';
+In your Header.jsx, add a useEffect to apply the theme to the document.body:
 
-function App() {
-  return (
-    <div className="app-container">
-      <Header />
-      <ToggleFilter />
-      <ExtensionList />
-    </div>
-  );
+
+import { useEffect, useState } from 'react';
+
+function Header() {
+  const [getTheme, setTheme] = useState("Dark");
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === "Dark" ? "Light" : "Dark"));
+  };
+
+  useEffect(() => {
+    document.body.className = getTheme === "Dark" ? "dark-theme" : "light-theme";
+  }, [getTheme]);
+
 }
 
-export default App;
 
 
-1️⃣ Header.jsx
-This will include:
 
-The “Extensions” label
 
-The search bar
 
-The theme toggle button (light/dark)
+In your main CSS file (like App.css or index.css), define the color variables for each theme:
 
-2️⃣ FilterBar.jsx
-Includes:
+/* Light Theme */
+body.light-theme {
+  --bg: #ffffff;
+  --text: #121212;
+  --card-bg: #f1f1f1;
+  --button-bg: #e0e0e0;
+}
 
-The “Extensions List” title
+/* Dark Theme */
+body.dark-theme {
+  --bg: #121212;
+  --text: #ffffff;
+  --card-bg: #1e1e1e;
+  --button-bg: #333333;
+}
 
-The three toggle buttons: All, Active, and Inactive
+/* Apply to body and global elements */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
 
-It can also control the state of what's displayed using props or context.
 
-3️⃣ ExtensionList.jsx + ExtensionCard.jsx
-ExtensionList maps through a list of extensions
 
-ExtensionCard is a reusable component where you pass:
 
-icon
+🔹 Card.css
 
-name
+.card-container {
+  background-color: var(--card-bg);
+  color: var(--text);
+}
 
-description
 
-isActive status (to toggle on/off view and switch)
+🔹 FilterBar.css
+
+.btn-container > button {
+  background-color: var(--button-bg);
+  color: var(--text);
+}
+
+
+
+🔹 Header.css
+
+.heady {
+  background-color: var(--bg);
+  color: var(--text);
+}
