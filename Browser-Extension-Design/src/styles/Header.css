@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-.toggler {
+.togglerD {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -26,13 +26,35 @@
     border: 2px solid transparent;
 }
 
-.toggler:focus {
+.togglerD:focus {
     outline: 2px solid var(--red-400);
     border: 2px solid var(--neutral-700);
     background-color: var(--neutral-600);
 }
 
-.toggler:hover {
+.togglerD:hover {
     background-color: var(--neutral-600);
 }
+
+.togglerL {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: var(--neutral-700);
+    padding: 0.9rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.togglerL:focus {
+    outline: 2px solid var(--red-400);
+    border: 2px solid var(--neutral-700);
+    background-color: var(--neutral-600);
+}
+
+.togglerL:hover {
+    background-color: var(--neutral-600);
+}
+
 

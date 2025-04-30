@@ -1,7 +1,12 @@
 import '../styles/Header.css'
 import sun from '../assets/images/icon-sun.svg'
+import { use, useState } from 'react';
 
 function Header() {
+
+    const [getTheme, setTheme] = useState("Dark");
+
+
     return (
         <div className="heady">
             <div className="headL">
@@ -11,7 +16,9 @@ function Header() {
                 <defs><clipPath id="a"><path fill="#fff" d="M0 0h40v41H0z"/></clipPath></defs></svg>
             </div>
             {/* tabIndex makes it so i can use :focus on the div */}
-            <div className="toggler" tabIndex="0">
+            <div 
+            onClick={() => setTheme("Dark")}
+            className={getTheme === "Dark" ? "togglerD" : "togglerL"} tabIndex="0">
                 <img src={sun} alt="Sun Symbol" />
             </div>
         </div>
