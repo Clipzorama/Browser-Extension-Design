@@ -15,46 +15,29 @@
     align-items: center;
 }
 
+.toggler {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0.9rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+
+
 .togglerD {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
     background-color: var(--neutral-700);
-    padding: 0.9rem;
-    border-radius: 15px;
-    cursor: pointer;
-    border: 2px solid transparent;
 }
-
-.togglerD:focus {
-    outline: 2px solid var(--red-400);
-    border: 2px solid var(--neutral-700);
-    background-color: var(--neutral-600);
-}
-
-.togglerD:hover {
-    background-color: var(--neutral-600);
-}
-
+  
 .togglerL {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    background-color: var(--neutral-700);
-    padding: 0.9rem;
-    border-radius: 15px;
-    cursor: pointer;
-    border: 2px solid transparent;
+    background-color: var(--neutral-300);
 }
-
+  
+.togglerD:focus,
 .togglerL:focus {
     outline: 2px solid var(--red-400);
     border: 2px solid var(--neutral-700);
-    background-color: var(--neutral-600);
 }
-
-.togglerL:hover {
-    background-color: var(--neutral-600);
-}
-
-
+  
