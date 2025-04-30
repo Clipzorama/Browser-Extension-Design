@@ -1,10 +1,19 @@
 import '../styles/Header.css'
 import sun from '../assets/images/icon-sun.svg'
-import { use, useState } from 'react';
+import moon from '../assets/images/icon-moon.svg'
+import { useState } from 'react';
 
 function Header() {
 
     const [getTheme, setTheme] = useState("Dark");
+
+    // "Dark" → clicking runs setTheme("Light")
+
+    // "Light" → clicking runs setTheme("Dark")
+
+    const toggleTheme = () => {
+        setTheme(prev => (prev === "Dark" ? "Light" : "Dark"));
+      };
 
 
     return (
@@ -17,9 +26,10 @@ function Header() {
             </div>
             {/* tabIndex makes it so i can use :focus on the div */}
             <div 
-            onClick={() => setTheme("Dark")}
-            className={getTheme === "Dark" ? "togglerD" : "togglerL"} tabIndex="0">
-                <img src={sun} alt="Sun Symbol" />
+            onClick={toggleTheme}
+            className={`toggler ${getTheme === "Dark" ? "togglerD" : "togglerL"}`}  
+            tabIndex="0">
+                <img src={getTheme === "Dark" ? sun : moon} alt="Symbol" />
             </div>
         </div>
     );
