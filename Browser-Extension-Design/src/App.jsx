@@ -16,84 +16,129 @@ import palettePicker from './assets/images/logo-palette-picker.svg'
 import lineChecker from './assets/images/logo-devlens.svg'
 import domSnap from './assets/images/logo-dom-snapshot.svg'
 import consolePlus from './assets/images/logo-console-plus.svg'
+import { useState } from 'react'
 
 
 function App() {
 
-  const cardData = [
+  const [activeFilter, setActiveFilter] = useState("connected");
+
+  const [cards, setCards] = useState([
     {
+      id: 1,
       imgSrc: devlens,
       title: "Devlens",
-      desc: "Quickly inspect page layouts and visualize element boundaries."
+      desc: "Quickly inspect page layouts and visualize element boundaries.",
+      isActive: false
     },
     {
+      id: 2,
       imgSrc: styleSpy,
       title: "StyleSpy",
-      desc: "Instantly analyze and copy CSS from any webpage element."
+      desc: "Instantly analyze and copy CSS from any webpage element.",
+      isActive: false
     },
     {
+      id: 3,
       imgSrc: speedBoost,
       title: "SpeedBoost",
-      desc: "Optimizes browser resource usage to accelerate page loading."
+      desc: "Optimizes browser resource usage to accelerate page loading.",
+      isActive: false
     },
     {
+      id: 4,
       imgSrc: jsonWizard,
       title: "JSONWizard",
-      desc: "Formats, validates, and prettifies JSON responses in-browser."
+      desc: "Formats, validates, and prettifies JSON responses in-browser.",
+      isActive: false
     },
     {
+      id: 5,
       imgSrc: tabMaster,
       title: "TabMaster Pro",
-      desc: "Organizes browser tabs into groups and sessions."
+      desc: "Organizes browser tabs into groups and sessions.",
+      isActive: false
     },
     {
+      id: 6,
       imgSrc: viewportBuddy,
       title: "ViewportBuddy",
-      desc: "Simulates various screen resolutions directly within the browser."
+      desc: "Simulates various screen resolutions directly within the browser.",
+      isActive: false
     },
     {
+      id: 7,
       imgSrc: markNotes,
       title: "Markup Notes",
-      desc: "Enables annotation and notes directly onto webpages for collaborative debugging."
+      desc: "Enables annotation and notes directly onto webpages for collaborative debugging.",
+      isActive: false
     },
     {
+      id: 8,
       imgSrc: gridGuides,
       title: "GridGuides",
-      desc: "Overlay customizable grids and alignment guides on any webpage."
+      desc: "Overlay customizable grids and alignment guides on any webpage.",
+      isActive: false
     },
     {
+      id: 9,
       imgSrc: palettePicker,
       title: "Palette Picker",
-      desc: "Instantly extracts color palettes from any webpage."
+      desc: "Instantly extracts color palettes from any webpage.",
+      isActive: false
     },
     {
+      id: 10,
       imgSrc: lineChecker,
       title: "LineChecker",
-      desc: "Scans and highlights broken links on any page."
+      desc: "Scans and highlights broken links on any page.",
+      isActive: false
     },
     {
+      id: 11,
       imgSrc: domSnap,
       title: "DOM Snapshot",
-      desc: "Capture and export DOM structures quickly."
+      desc: "Capture and export DOM structures quickly.",
+      isActive: false
     },
     {
+      id: 12,
       imgSrc: consolePlus,
       title: "ConsolePlus",
-      desc: "Enhanced developer console with advanced filtering and logging."
+      desc: "Enhanced developer console with advanced filtering and logging.",
+      isActive: false
     }
-  ]
+  ]);
+
+
+
+  const handleToggle = (id) => {
+    setCards(prev =>
+      prev.map(card =>
+        card.id === id ? { ...card, isActive: !card.isActive } : card
+      )
+    );
+  };
+
+  const filteredCards = cards.filter(card => {
+    if (activeFilter === "Active") return card.isActive;
+    if (activeFilter === "Inactive") return !card.isActive;
+    return true; // All
+  });
 
   return (
     <div className="app-container">
       <Header />
-      <FilterBar />
+      <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
       <div className="cardList">
-        {cardData.map((card, index) => (
+        {filteredCards.map(card => (
           <Card 
-          key={index}
+          key={card.id}
           imgSrc={card.imgSrc}
           title={card.title}
           desc={card.desc}
+          isActive={card.isActive}
+          onToggle= {() => handleToggle(card.id)}
           />
       ))}
 

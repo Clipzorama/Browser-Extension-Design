@@ -1,11 +1,7 @@
 import '../styles/FilterBar.css'
 
-import { useState } from 'react'
+function FilterBar({ activeFilter, setActiveFilter }) {
 
-
-function FilterBar() {
-
-    const [activeFilter, setActiveFilter] = useState("connected");
 
     return (
         <div className="filter-container">

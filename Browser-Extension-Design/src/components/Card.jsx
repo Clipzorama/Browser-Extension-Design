@@ -1,6 +1,6 @@
 import '../styles/Card.css'
 
-function Card({imgSrc, title, desc}) {
+function Card({imgSrc, title, desc, isActive, onToggle}) {
     return (
         <div className="card-container">
             <section className="top">
@@ -12,10 +12,9 @@ function Card({imgSrc, title, desc}) {
             </section>
             <div className="bottom">
                 <button className="removeBtn">Remove</button>
-
                 {/* Anywhere on the label will toggle the checkbox when clicked */}
                 <label className="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" checked={isActive} onChange={onToggle} />
                     <span className="slider"></span>
                 </label>
             </div>
