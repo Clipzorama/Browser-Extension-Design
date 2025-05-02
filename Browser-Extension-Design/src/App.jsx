@@ -111,16 +111,20 @@ function App() {
   ]);
 
 
-
+  // This function updates a specific card’s isActive state when the switch is clicked.
+  // works with the checked attribute
   const handleToggle = (id) => {
     setCards(prev =>
       prev.map(card =>
+        // if id matches then the 'isActive' bool property negates itself
         card.id === id ? { ...card, isActive: !card.isActive } : card
       )
     );
   };
 
+  // depending if the card is active or not, then it appears inside of the card container
   const filteredCards = cards.filter(card => {
+    // This works with FilterBar.jsx
     if (activeFilter === "Active") return card.isActive;
     if (activeFilter === "Inactive") return !card.isActive;
     return true; // All
@@ -129,6 +133,7 @@ function App() {
   return (
     <div className="app-container">
       <Header />
+      {/* using the useState as the props inside of the component */}
       <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
       <div className="cardList">
         {filteredCards.map(card => (

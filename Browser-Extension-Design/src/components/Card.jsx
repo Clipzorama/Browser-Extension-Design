@@ -1,5 +1,6 @@
 import '../styles/Card.css'
 
+// Destructuring my props in the component
 function Card({imgSrc, title, desc, isActive, onToggle}) {
     return (
         <div className="card-container">
