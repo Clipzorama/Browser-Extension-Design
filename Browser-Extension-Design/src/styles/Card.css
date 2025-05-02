@@ -2,7 +2,7 @@
     background-color: var(--card-bg);
     width: 32%;
     border-radius: 15px;
-    border: 1px solid var(--neutral-600);
+    border: 1px solid var(--card-border);
     padding: 1rem;
 }
 
@@ -38,9 +38,9 @@
 .bottom > button {
     padding: 0.4rem 1rem;
     border-radius: 20px;
-    background-color: var(--neutral-800);
-    border: 2px solid hsla(226, 11%, 37%, 0.6);
-    color: var(--neutral-100);
+    background-color: var(--card-bg);
+    border: 2px solid var(--card-border);
+    color: var(--remove-txt);
     cursor: pointer;
     font-weight: 500;
 }
@@ -82,7 +82,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #4b5563; 
+    background-color: var(--track-bg); 
     transition: 0.4s;
     border-radius: 24px;
 }

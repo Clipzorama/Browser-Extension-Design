@@ -26,18 +26,33 @@
 
 body.dark-theme {
   --bg: linear-gradient(to bottom, #040918, #091540);
+
+  --filter-btn-bg: var(--neutral-700);
+
+
+  --card-bg: var(--neutral-800);
   --card-h3: var(--neutral-0);
   --card-p: var(--neutral-300);
+  --card-border: hsla(226, 11%, 37%, 0.6);
+  --remove-txt: var(--neutral-100);
+  --track-bg: var(--neutral-600);
+
 
 }
 
 body.light-theme {
   --bg: linear-gradient(to bottom, #EBF2FC, #EEF8F9);
+
+  --filter-btn-bg: var(--neutral-0);
+
+
+  --card-bg: var(--neutral-0);
   --card-h3: var(--neutral-900);
+  --card-p: var(--neutral-600);
+  --card-border: var(--neutral-200);
+  --remove-txt: var(--neutral-900);
+  --track-bg: var(--neutral-300);
 }
-
-
-
 
 * {
   padding: 0;

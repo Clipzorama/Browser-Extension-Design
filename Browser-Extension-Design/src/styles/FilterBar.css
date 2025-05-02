@@ -9,7 +9,7 @@
 }
 
 .filter-container > h2 {
-    color: hsl(200, 60%, 99%);
+    color: var(--remove-txt);
     font-size: 2rem;
 }
 
@@ -44,9 +44,9 @@
 }
 
 .inactive {
-    background-color: hsl(225, 23%, 24%);
-    color: var(--neutral-100);
-    border: 1px solid var(--neutral-600);
+    background-color: var(--filter-btn-bg);
+    color: var(--remove-txt);
+    border: 1px solid var(--card-border);
 }
 
 .inactive:focus {
