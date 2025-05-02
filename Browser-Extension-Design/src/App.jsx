@@ -127,7 +127,7 @@ function App() {
     // This works with FilterBar.jsx
     if (activeFilter === "Active") return card.isActive;
     if (activeFilter === "Inactive") return !card.isActive;
-    return true; // All
+    return true; // this refers to the ALL button in FilterBar.jsx
   });
 
   return (

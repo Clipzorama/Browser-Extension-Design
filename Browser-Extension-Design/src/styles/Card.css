@@ -1,5 +1,5 @@
 .card-container {
-    background-color: var(--neutral-800);
+    background-color: var(--card-bg);
     width: 32%;
     border-radius: 15px;
     border: 1px solid var(--neutral-600);
@@ -19,13 +19,13 @@
 }
 
 .header-section > h3 {
-    color: var(--neutral-0);
+    color: var(--card-h3);
     font-weight: 700;
 }
 
 .header-section > p {
     font-size: 0.94rem;
-    color: var(--neutral-300);
+    color: var(--card-p);
     font-weight: 400;
 }
 

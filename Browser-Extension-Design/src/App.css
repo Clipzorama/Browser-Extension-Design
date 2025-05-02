@@ -2,42 +2,57 @@
 
 :root {
 
-    /* 400, 500, 700 */
+  /* 400, 500, 700 */
 
-    /* Neutral Colors */
-    --neutral-900: hsl(227, 75%, 14%);
-    --neutral-800: hsl(226, 25%, 17%);
-    --neutral-700: hsl(225, 23%, 24%);
-    --neutral-600: hsl(226, 11%, 37%);
-    --neutral-300: hsl(0, 0%, 78%);
-    --neutral-200: hsl(217, 61%, 90%);
-    --neutral-100: hsl(0, 0%, 93%);
-    --neutral-0: hsl(200, 60%, 99%);
-  
-    /* Red Colors */
-    --red-400: hsl(3, 86%, 64%);
-    --red-500: hsl(3, 71%, 56%);
-    --red-700: hsl(3, 77%, 44%);
-  
-    /* Gradients */
-    --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
-    --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
-  }
+  /* Neutral Colors */
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
 
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Noto Sans", sans-serif;
-  }
+  /* Red Colors */
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
 
-  body {
-    background-image: linear-gradient(to bottom, #040918, #091540);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    padding: 3rem 8rem 4rem 8rem;
+  /* Gradients */
+  --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
 
+body.dark-theme {
+  --bg: linear-gradient(to bottom, #040918, #091540);
+  --card-h3: var(--neutral-0);
+  --card-p: var(--neutral-300);
+
+}
+
+body.light-theme {
+  --bg: linear-gradient(to bottom, #EBF2FC, #EEF8F9);
+  --card-h3: var(--neutral-900);
+}
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-image: var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 3rem 8rem 4rem 8rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .cardList {

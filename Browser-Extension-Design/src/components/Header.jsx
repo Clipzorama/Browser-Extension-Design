@@ -1,7 +1,7 @@
 import '../styles/Header.css'
 import sun from '../assets/images/icon-sun.svg'
 import moon from '../assets/images/icon-moon.svg'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Header() {
 
@@ -11,9 +11,15 @@ function Header() {
 
     // "Light" → clicking runs setTheme("Dark")
 
+    // Changes the theme that'll work with the useEffect()
     const toggleTheme = () => {
         setTheme(prev => (prev === "Dark" ? "Light" : "Dark"));
       };
+    
+    // This will get executed when the button is clicked
+    useEffect(() => {
+        document.body.className = getTheme === "Dark" ? "dark-theme" : "light-theme";
+    }, [getTheme]);
 
 
     return (
