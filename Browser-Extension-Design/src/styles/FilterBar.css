@@ -26,6 +26,8 @@
     font-weight: 500;
 }
 
+
+
 .active {
     background-color: var(--red-400);
     color: var(--neutral-700);
