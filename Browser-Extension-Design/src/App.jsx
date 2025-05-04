@@ -122,7 +122,7 @@ function App() {
     );
   };
 
-  // depending if the card is active or not, then it appears inside of the card container
+  // depending if the card is active or not, then it appears inside of the card container. only shows the descripted cards in the array.
   const filteredCards = cards.filter(card => {
     // This works with FilterBar.jsx
     if (activeFilter === "Active") return card.isActive;
