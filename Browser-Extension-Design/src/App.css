@@ -85,4 +85,14 @@ body {
   flex-wrap: wrap;
   gap: 1.4rem;
 }
-  
+
+@media screen and (max-width:450px) {
+  body {
+    padding: 1rem 1rem 3rem 1rem;
+  }
+
+  .cardList {
+    flex-direction: column;
+  }
+}
+
