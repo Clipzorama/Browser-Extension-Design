@@ -37,6 +37,8 @@ body.dark-theme {
   --remove-txt: var(--neutral-100);
   --track-bg: var(--neutral-600);
 
+  --checked-color: var(--red-400);
+
 
 }
 
@@ -52,6 +54,9 @@ body.light-theme {
   --card-border: var(--neutral-200);
   --remove-txt: var(--neutral-900);
   --track-bg: var(--neutral-300);
+
+  --checked-color: var(--red-700);
+
 }
 
 * {
@@ -66,7 +71,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  padding: 3rem 8rem 4rem 8rem;
+  padding: 2.5rem 8rem 4rem 8rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
