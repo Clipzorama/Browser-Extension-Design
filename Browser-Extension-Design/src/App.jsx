@@ -117,6 +117,8 @@ function App() {
     setCards(prev =>
       prev.map(card =>
         // if id matches then the 'isActive' bool property negates itself
+        // also starting with {} is an object literal. 
+        // it keeps all of the properties of the card object but updates isActive
         card.id === id ? { ...card, isActive: !card.isActive } : card
       )
     );
