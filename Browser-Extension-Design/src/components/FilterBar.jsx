@@ -1,5 +1,7 @@
 import '../styles/FilterBar.css'
 
+
+// Destructuring the props to access each property in App.jsx. Connected with useState
 function FilterBar({ activeFilter, setActiveFilter }) {
 
 
