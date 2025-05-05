@@ -28,6 +28,9 @@ body.dark-theme {
   --bg: linear-gradient(to bottom, #040918, #091540);
 
   --filter-btn-bg: var(--neutral-700);
+  --tog-hov: var(--neutral-600);
+  --ina-hov: var(--neutral-600);
+
 
 
   --card-bg: var(--neutral-800);
@@ -46,7 +49,8 @@ body.light-theme {
   --bg: linear-gradient(to bottom, #EBF2FC, #EEF8F9);
 
   --filter-btn-bg: var(--neutral-0);
-
+  --tog-hov: var(--neutral-300);
+  --ina-hov: var(--neutral-100);
 
   --card-bg: var(--neutral-0);
   --card-h3: var(--neutral-900);

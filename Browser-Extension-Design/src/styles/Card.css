@@ -43,12 +43,13 @@
     color: var(--remove-txt);
     cursor: pointer;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 .bottom > button:hover {
-    background-color: var(--red-400);
-    color: var(--neutral-700);
-    border: 2px solid var(--red-400);
+    background-color: var(--checked-color);
+    color: var(--filter-btn-bg);
+    border: 2px solid var(--checked-color);
 }
 
 .bottom > button:focus {

@@ -29,15 +29,10 @@
 
 
 .active {
-    background-color: var(--red-400);
-    color: var(--neutral-700);
-    border: 2px solid var(--red-400);
+    background-color: var(--checked-color);
+    color: var(--filter-btn-bg);
+    border: 2px solid var(--checked-color);
 
-}
-
-.active:focus {
-    outline: 2px solid var(--red-400);
-    border: 2px solid var(--neutral-700);
 }
 
 .active:hover {
@@ -51,14 +46,8 @@
     border: 1px solid var(--card-border);
 }
 
-.inactive:focus {
-    outline: 2px solid var(--red-400);
-    border: 1px solid var(--neutral-700);
-    background-color: var(--neutral-600);
-}
-
 .inactive:hover {
-    background-color: var(--neutral-600);
+    background-color: var(--ina-hov);
 }
 
 

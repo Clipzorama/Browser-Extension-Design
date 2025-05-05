@@ -23,9 +23,11 @@
     border-radius: 15px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: 0.4s;
 }
 
+.toggler:hover {
+    background-color: var(--tog-hov);
+}
 
 .togglerD {
     background-color: var(--neutral-700);
